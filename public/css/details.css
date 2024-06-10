@@ -1,0 +1,55 @@
+#entete{
+    right: 0;
+    top: 0;
+    z-index: 10px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    /*background-color: aqua;*/
+}
+#categorie{
+    position: fixed;
+    display: flex;
+    background-color: blue;
+    right: 10px;
+    top: 0px;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 250px;
+    height: 950px;
+}
+
+#visuel{
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    background-color: blueviolet;
+    bottom: 5px;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 1105px;
+    height: 200px;
+}
+
+#carte{
+    position: fixed;
+    left: 0;
+    top: 0px;
+    background-color: burlywood;
+    bottom: 5px;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 1100px;
+    height: 400px;
+    padding: 0px;
+    border: 2px solid white;
+}
+body{
+    background-color:rgb(167, 230, 255,0.3);
+}
+
+#map { 
+    height: 400px;
+    width: 1100px; 
+}
