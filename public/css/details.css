@@ -1,42 +1,47 @@
-#entete{
-    right: 0;
-    top: 0;
-    z-index: 10px;
-    width: 100%;
-    position: fixed;
-    display: flex;
-    /*background-color: aqua;*/
-}
+
 #categorie{
+    z-index: 20;
     position: fixed;
     display: flex;
-    background-color: blue;
+    background-color: rgb(167, 230, 255,0.3);
     right: 10px;
     top: 0px;
     justify-content: flex-start;
     flex-direction: column;
     width: 250px;
     height: 950px;
+    opacity: 100%;
+   
 }
 
+
 #visuel{
+    z-index: 0;
     left: 0;
     bottom: 0;
-    position: fixed;
+    position: absolute;
     display: flex;
-    background-color: blueviolet;
+    background-color: rgb(167, 230, 255,0.3);
     bottom: 5px;
-    justify-content: flex-start;
+    justify-content: center;
+    text-align: center;
     flex-direction: row;
-    width: 1105px;
-    height: 200px;
+    height: 160px;
+    padding:5px;
+    flex-wrap: nowrap;
+}
+
+.img{
+    padding-left: 5px;
+    width:160px;
+    height: 140px;
+    border-radius: 15px;
 }
 
 #carte{
     position: fixed;
     left: 0;
     top: 0px;
-    background-color: burlywood;
     bottom: 5px;
     justify-content: flex-start;
     flex-direction: row;
@@ -52,4 +57,96 @@ body{
 #map { 
     height: 400px;
     width: 1100px; 
+}
+
+#barR {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0px;
+    border: 0px solid white;
+    border-radius: 10px;
+    background: white;
+    margin: 15px 3px 0px 3px;
+
+}
+
+#recherche{
+    width: 240px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.option{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid whitesmoke;
+    border-radius: 50%;
+    padding: 10px;
+    color: #050C9C;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+}
+.option:hover{
+    border-color:whitesmoke ;
+    transform: scale(1.1);
+    color: white;
+    background: #050C9C;
+
+}
+#btnRecherche{
+    color: #050C9C;
+    border-radius: 10px;
+    background: white;
+    border-width: 0px;
+    padding: 10px;
+    font-weight: bold;
+    border-style: none;
+}
+
+#fa-solid{
+    width: 20px;
+    height: 20px;
+    font-size: 24px;
+    padding: 0px;
+    
+}
+input {
+    border-color:white ;
+}
+input:focus{
+    border-color:whitesmoke
+}
+
+#divO{
+    display: flex;
+    margin: 10px 3px 0px 3px;
+    display: flex;
+    justify-content: center;
+
+}
+#desc{
+    height: 450px;
+    background: white;
+    margin: 5px;
+    border-radius: 15px;
+}
+#desc p{
+    top: 0;
+    left: 0;
+    background-color: #050C9C;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 5px;
+    color: white;
+    margin: 0px;
 }

@@ -6,7 +6,7 @@ const locationOptions = {
 
 
 
-var map = L.map('map').setView([12.30,-1.43], 13);
+var map = L.map('map').setView([12.30,-1.43], 5);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'

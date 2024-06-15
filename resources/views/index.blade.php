@@ -24,8 +24,8 @@
             <div id="gMenu">
                 <div><a href="" class="mi">burkina</a></div>
                 <div><a href="" class="mi">FAQ</a></div>
-                <div><a href="" class="mi">S'inscrire</a></div>
-                <div><a href="" class="mi">Se connecter</a></div>
+                <div><a href="/signIn" class="mi">S'inscrire</a></div>
+                <div><a href="/logIn" class="mi">Se connecter</a></div>
                 <div><a href="" class="mi">Ajouter un site</a></div>
             </div>
         </div>
@@ -37,7 +37,10 @@
                  <div> <a href="" class="smi">Sites</a></div>
                 <div> <a href="" class="smi">OuagaActu</a></div>
            </div>
-            <div href=""><input type="search" name="barRecherche" id="barRecherche" placeholder="Effectuer une recherche..."></div>
+            <div href=""  id="barR">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" name="barRecherche" id="barRecherche" placeholder="Effectuer une recherche...">
+            </div>
             <div id="bandereau">
                 <img src="{{asset("/image/bf10.png")}}" alt="">
             </div>

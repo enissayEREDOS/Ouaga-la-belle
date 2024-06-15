@@ -98,10 +98,48 @@
     height: 2px; 
     background-color: green;
 }
+
+#btnRecherche{
+    color: #050C9C;
+    border-radius: 10px;
+    background: white;
+    border-width: 0px;
+    padding: 10px;
+    font-weight: bold;
+    border-style: none;
+}
+
+.fa-solid{
+    text-align: center;
+    width: 28px;
+    height: 28px;
+    font-size: 24px;
+    margin: 5px;
+    background: white;
+}
+input {
+    border-color:white ;
+}
+input:focus{
+    border-color:whitesmoke
+}
+#barR {
+    flex-direction: row;
+    margin-bottom: 10px;
+    display: flex;
+    text-align: center;
+    padding: 0px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background: white;
+    justify-content: center;
+    height: 35px;
+
+}
 #barRecherche{
     width: 350px;
     height: 35px;
-    background: whitesmoke;
+    background: white;
     border-radius: 20px;
     border-color: aliceblue;
     box-shadow: inset;
@@ -111,6 +149,7 @@
     
 
 }
+
 
 #corps{
     background-image: url("/image/bfouaga.jpg");
@@ -149,7 +188,7 @@
 .site{
     border:1px solid whitesmoke;
     border-radius: 15px;
-    background: whitesmoke;
+    background: white;
 
 }
 

@@ -1,0 +1,109 @@
+body{
+    background-color:rgb(167, 230, 255,0.3);
+}
+
+form{
+    display: flex;
+    margin: 0px 450px 0px 450px;
+    border: 1px solid white;
+    border-radius:10px ;
+    background-color: white;
+    justify-content: center;
+    width: 420px;
+    box-shadow:inset;
+    padding: 20px 5px 0px 5px;
+}
+table{
+   background-color: white;
+    display: flex;
+    justify-content: center;
+    border: 1px solid white;
+    /*border-radius: 15px;*/
+   /* margin: 0px 450px 0px 450px;*/
+    padding: 0px 5px 0px 5px;
+    text-align: center;
+    width: 410px;
+    padding-bottom: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#incrivezvous {
+    /*margin: 20px 450px 0px 450px;*/
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /*background-color: #050C9C;*/
+    color: #3572EF;
+   /* border-top-left-radius: 15px;
+    border-top-right-radius: 15px;*/
+    width: 400px;
+    padding: 5px 0px 5px 0px ;
+}
+a {
+    color: #3572EF;
+}
+#barH{
+    background-color: #050C9C;
+}
+.champ {
+    width: 300px;
+    height: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 14px;
+    border: #050C9C 2px solid;
+    border-radius: 10px;
+
+}
+select{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 300px;
+    height: 30px;
+    border:1px solid whitesmoke;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    border: #050C9C 2px solid;
+}
+td{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    justify-content: center;
+}
+#btn{
+    justify-content: space-between;
+    padding: 0px 55px 0px 55px;
+}
+input{
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   /* border-radius: 10px;*/
+    border: #050C9C 1px solid;
+}
+p{
+    padding-left: 5px;
+    font-size: 14px;
+    color:#050C9C;
+    font-weight: bold;
+}
+
+#submit{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 5px 20px 5px 20px;
+    margin:10px 0px 10px 0px ;
+    border-radius: 10px;
+    color: white;
+    border-color: #3572EF;
+    background-color: #3572EF;
+    width: 300px;
+
+}
+#submit:hover{
+    color: white;
+    background-color: #050C9C;
+}
+
