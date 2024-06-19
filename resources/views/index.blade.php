@@ -55,7 +55,10 @@
         <div>
             <h2>Type1</h2>
             <div class="typeSites">
-                <a href="/map" class="site"> 
+                <a href="#" onclick="event.preventDefault(); document.getElementById('details-form').submit();"> 
+                    <form action="/details" method="GET" id="details-form">
+                        <input type="hidden" name="id" id="id" value="1">
+                    </form>
                      <img src="{{asset('image/télécharger.jpg')}}" alt="site1" class="img">
                      <h2>Titre3</h2>
                      <h4><em>sous titre3</em></h4>

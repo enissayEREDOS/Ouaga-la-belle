@@ -4,41 +4,14 @@ const locationOptions = {
     enableHighAccuracy: true
 };
 
-
-
-var map = L.map('map').setView([12.30,-1.43], 5);
+var map = L.map('map').setView([12.30, -1.43], 11);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    minZoom: 1,
+    maxZoom: 20
 }).addTo(map);
-/*var marker = L.marker([51.5, -0.09]).addTo(map);
-var circle = L.circle([51.508, -0.11], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5,
-    radius: 500
-}).addTo(map);
-var polygon = L.polygon([
-    [51.509, -0.08],
-    [51.503, -0.06],
-    [51.51, -0.047]
-]).addTo(map);
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-circle.bindPopup("I am a circle.");
-polygon.bindPopup("I am a polygon.");
-var popup = L.popup()
-    .setLatLng([51.513, -0.09])
-    .setContent("I am a standalone popup.")
-    .openOn(map);
 
-    function onMapClick(e) {
-        alert("You clicked the map at " + e.latlng);
-    }
-    
-    map.on('click', onMapClick);
-
-
-    var popup = L.popup();*/
+var popup = L.popup();
 
 function onMapClick(e) {
     popup
@@ -56,21 +29,36 @@ if ("geolocation" in navigator) {
     alert("Géolocalisation indisponible");
 }
 
-
 function handleLocation(position) {
     /* Zoom avant de trouver la localisation */
-    map.setZoom(16);
+    map.setView([position.coords.latitude, position.coords.longitude], 16);
+
     /* Centre la carte sur la latitude et la longitude de la localisation de l'utilisateur */
-    var maposition=new L.LatLng(position.coords.latitude, position.coords.longitude)
+    var maposition = new L.LatLng(position.coords.latitude, position.coords.longitude);
     var macircle = L.circle(maposition, {
         color: 'blue',
         fillColor: 'blue',
         fillOpacity: 0.5,
-        radius: 0.005
+        radius: 50 // Rayon en mètres
     }).addTo(map);
-    map.panTo(macircle);
+    map.panTo(maposition);
 }
 
 function handleLocationError(msg) {
     alert("Erreur lors de la géolocalisation");
 }
+
+function placeSite() {
+    let lat = parseFloat(document.getElementById('lat').value);
+    let lng = parseFloat(document.getElementById('lng').value);
+    let site = document.getElementById('nom').value;
+    var marker = L.marker([lng, lat]).addTo(map);
+    var marker2 = L.marker([lng + 1, lat- 1]).addTo(map); 
+    marker.bindPopup("<b>" + site + "</b><br>I am a popup.").openPopup();
+}
+placeSite();
+// Appel de placeSite() après la récupération des valeurs lat et lng depuis le formulaire
+document.getElementById('submit').addEventListener('click', function(event) {
+    event.preventDefault(); // Empêche la soumission du formulaire
+    placeSite();
+});

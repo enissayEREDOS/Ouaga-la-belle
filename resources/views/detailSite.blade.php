@@ -31,6 +31,11 @@
     </div>
     <div id="desc">
         <p>Description</p>
+        <input type="hidden" name="lat" id="lat" value="{{$site->latitude}}">
+        <input type="hidden" name="lng" id="lng" value="{{$site->longitude}}">
+        <input type="hidden" name="nom" id="nom" value="{{$site->name}}">
+        {{ $site->description }}
+
     </div>
 </div>
 <div id="visuel">
@@ -45,7 +50,8 @@
     <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
 </div>
 <div id="carte">
-    @yield('content') 
+   <div id="map"></div>
 </div>
 </body>
+<script src="{{ asset('js/map.js') }}"></script>
 </html>

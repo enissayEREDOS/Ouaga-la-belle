@@ -40,15 +40,16 @@
 </style>
 @extends('layout')
 @section('content')
-<div id="incrivezvous">Authentifiez-vous et porfitez de bon coins de Ouaga</div>
+<div class="incrivezvous">Authentifiez-vous et porfitez de bon coins de Ouaga</div>
 <div id="groupe">
-    <form action="">
+    <form action="/logIn" method="POST">
+        @csrf
         <table>
             <tr>
-                <td class="td" ><div class="entre"><i class="fa-solid fa-user"></i><input type="email" class="champ" id="champ0" placeholder="User name"></div></td>
+                <td class="td" ><div class="entre"><i class="fa-solid fa-user"></i><input type="email" name="email" class="champ" id="champ0" placeholder="User name"></div></td>
             </tr>
             <tr>
-                <td><div class="entre"><i class="fa-solid fa-key"></i><input type="password" name="pwd" id="pwd" class="champ"  placeholder="PassWord"></div></td>
+                <td><div class="entre"><i class="fa-solid fa-key"></i><input type="password" name="mot_de_passe" id="pwd" class="champ"  placeholder="PassWord"></div></td>
             </tr>
             <tr>
                 <td><input type="submit" value="Valider" id="submit"></td>
