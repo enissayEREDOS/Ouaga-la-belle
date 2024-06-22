@@ -19,6 +19,9 @@ return new class extends Migration
             $table->double('longitude');
             $table->date('date_creation');
             $table->foreignId('quartier_id');
+            $table->foreignId('categorie_id');
+            $table->string('img');
+            $table->timestamps();
 
         });
     }

@@ -1,0 +1,117 @@
+/* Make sure to apply a global reset or normalize styles if needed */
+
+body, html {
+   
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(167, 230, 255,0.3);
+}
+
+#container {
+    background-color: rgb(167, 230, 255,0.3);
+    display: flex;
+    height: 100vh;
+}
+
+#navigation {
+    width: 200px; /* Adjust the width as needed */
+    background-color:#050C9C ;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#navigation ul li {
+    padding: 10px 0;
+}
+
+#content {
+    flex-grow: 1; /* This makes the content take up the remaining space */
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+    margin-left: 5px;
+}
+.nouveau{
+    top: 45px;
+    right: 15px;
+    padding: 10px ;
+    background-color: #3572EF;
+    ;
+    text-decoration: none;
+    text-align: right;
+    display: block;
+    position: absolute;
+    width: 120px;
+    height: 20px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.sousentete{
+    background-color: #3572EF;
+    color: white;
+}
+h1{
+    align-items: center;
+    text-align: center;
+    color: #050C9C;
+}
+tr:nth-child(even) {
+    background-color: #fef2d1;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+tr:hover {
+    background-color: #ddd;
+}
+.fa-trash{
+    color: red;
+}
+.fa-eye{
+    color: goldenrod;
+}
+.btnImg{
+    border: white 0px ;
+    background-color: transparent;
+}
+.action{
+    width: 20px;
+    text-align: center;
+}
+.titrePage{
+    text-align: center;
+    color: #3572EF;
+}
+.fa-list{
+    color: green;
+}
+#enteteTable{
+    background-color: #050C9C;
+    color: white;
+    font-size: 14px;
+    font-weight: bolder;
+}

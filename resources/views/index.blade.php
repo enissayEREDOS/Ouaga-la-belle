@@ -38,8 +38,13 @@
                 <div> <a href="" class="smi">OuagaActu</a></div>
            </div>
             <div href=""  id="barR">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="search" name="barRecherche" id="barRecherche" placeholder="Effectuer une recherche...">
+                <form action="/recherche" method="post" id="rechercheForm">
+                    @csrf
+                    <a href="#" onclick="event.preventDefault(); document.getElementById('rechercheForm').submit();">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                    <input type="search" name="recherche" id="barRecherche" placeholder="Effectuer une recherche...">
+                </form>
             </div>
             <div id="bandereau">
                 <img src="{{asset("/image/bf10.png")}}" alt="">
@@ -52,7 +57,25 @@
     </div>
     <div id="lesSites">
         <p class="titreType">les images des sites</p>
+        @foreach ($categories as $categorie )
         <div>
+            <h2>{{$categorie->nom_cat}}</h2>
+            <div class="typeSites">
+                @foreach ($categorie->sites as $site)
+                    <a href="#" onclick="event.preventDefault(); document.getElementById('details-form{{$site->id}}').submit();" class="site"> 
+                        <form action="/details" method="GET" id="details-form{{$site->id}}">
+                            <input type="hidden" name="id" id="id" value="{{$site->id}}">
+                        </form>
+                        <img src="{{ asset('storage/' . $site->img) }}" alt="{{$site->img}}" class="img">
+                        <h2>{{$site->nom}}</h2>
+                        <h4><em>situé à {{$site->quartier->quartier}}</em></h4>
+                        <h3>Note</h3>
+                    </a>
+                @endforeach
+             </div>
+       <div>
+        @endforeach
+       <!-- <div>
             <h2>Type1</h2>
             <div class="typeSites">
                 <a href="#" onclick="event.preventDefault(); document.getElementById('details-form').submit();"> 
@@ -115,7 +138,9 @@
             <div id="voirPlus"> <a href="" id="surVoirPlus">Voir plus..</a></div>
          </div>
        </div>
-    </div>
+    </div>-->
+    
+
     <div id="pied">
         <ul class="elemPied">
            <p> Contacts</p>

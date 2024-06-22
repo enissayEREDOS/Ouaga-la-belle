@@ -33,12 +33,18 @@
         <p>Description</p>
         <input type="hidden" name="lat" id="lat" value="{{$site->latitude}}">
         <input type="hidden" name="lng" id="lng" value="{{$site->longitude}}">
-        <input type="hidden" name="nom" id="nom" value="{{$site->name}}">
-        {{ $site->description }}
+        <input type="hidden" name="nom" id="nom" value="{{$site->nom}}">        
+        <h2 style="color: green; 
+        font-size: 18px ;text-align: center;
+        font-style: italic">{{ $site->nom}}</h2>
+        <h5 style="padding: 5px; color: #3572EF ;
+        font-family: Arial, Helvetica, sans-serif">{{ $site->description }}</h5>
+       
 
     </div>
 </div>
 <div id="visuel">
+    <!--<img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
     <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
     <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
     <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
@@ -46,8 +52,10 @@
     <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
     <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
     <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
-    <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
-    <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
+    <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">-->
+    @foreach ($site->images as $image)
+        <img src="{{ asset('storage/' . $image->nom_image) }}" alt="{{$image->nom_image}}" class="img">
+    @endforeach
 </div>
 <div id="carte">
    <div id="map"></div>
