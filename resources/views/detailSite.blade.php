@@ -44,15 +44,6 @@
     </div>
 </div>
 <div id="visuel">
-    <!--<img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
-    <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
-    <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
-    <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
-    <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
-    <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
-    <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
-    <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">
-    <img src="{{asset("/image/monuma.jpg")}}" alt="" class="img">-->
     @foreach ($site->images as $image)
         <img src="{{ asset('storage/' . $image->nom_image) }}" alt="{{$image->nom_image}}" class="img">
     @endforeach

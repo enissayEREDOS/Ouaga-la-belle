@@ -41,6 +41,8 @@ Route::post('dashbord/categories/store',[CategorieController::class,'store']);
 Route::get('/dashbord/categories/{id}/edit',[CategorieController::class,'edit']);
 Route::post('/dashbord/categories/{id}/edit',[CategorieController::class,'update']);
 Route::get('/dashbord/categories/{id}/delete',[CategorieController::class,'delete']);
+Route::get('/dashbord/categories/{id}/sites',[CategorieController::class,'sites']);
+
 
 //quartiers
 Route::get('dashbord/quartiers',[QuartierController::class,'index']);
@@ -49,9 +51,13 @@ Route::post('dashbord/quartiers/store',[QuartierController::class,'store']);
 Route::get('/dashbord/quartiers/{id}/edit',[QuartierController::class,'edit']);
 Route::post('/dashbord/quartiers/{id}/edit',[QuartierController::class,'update']);
 Route::get('/dashbord/quartiers/{id}/delete',[QuartierController::class,'delete']);
+Route::get('/dashbord/quartiers/{id}/sites',[QuartierController::class,'sites']);
 
 //images
 Route::get('dashbord/images',[ImageController::class,'index']);
 Route::post('dashbord/images/store',[ImageController::class,'store']);
 Route::get('dashbord/images/{id}/delete',[ImageController::class,'delete']);
 Route::get('dashbord/images/{id}/edit',[ImageController::class,'update']);
+
+//utilisateurs
+Route::get('dashbord/users',[UserController::class,'index']);

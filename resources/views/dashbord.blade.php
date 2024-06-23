@@ -10,12 +10,22 @@
 <body>
     <div id="container">
         <div id="navigation" class="groupe">
+            <div id="barH">
+                <div id="logo">     
+                    <div id="ouagalabel"><strong id="ouaga">Ouaga</strong><em id="la">La</em><em id="belle">Belle</em></div>
+                    <div id="devise">Ouaga, la terre de l'hospitalité!!</div>
+                </div>
+            </div>
             <ul>
-                <li>Tableau de bord</li>
-                <li>Sites/li>
-                <li>Utilisateurs/li>
-                <li>Paramètre</li>
-                <li>Se déconnecter</li>
+                <li class="dashbord_i"><a href="/dashbord" class="a"><i class="fa-solid fa-gauge"></i>&ensp;Tableau de bord</a></li>
+                <li class="dashbord_i"><a href="/" class="a"><i class="fa-solid fa-gauge"></i>&ensp;Accueil</a></li>
+                <li class="dashbord_i"><a href="/dashbord/sites"  class="a"><i class="fa-solid fa-sitemap"></i>&ensp;Sites</a></li>
+                <li class="dashbord_i"><a href="/dashbord/categories"  class="a"><i class="fa-solid fa-table-list"></i>&ensp;Catégories</a></li>
+                <li class="dashbord_i"><a href="/dashbord/quartiers"  class="a"><i class="fa-solid fa-location-dot"></i>&ensp;Localités</a></li>
+                <li class="dashbord_i"><a href="/dashbord/tarifs"  class="a"><i class="fa-solid fa-tag"></i>&ensp;Tarifs</a></li>
+                <li class="dashbord_i"><a href="/dashbord/users" class="a" ><i class="fa-solid fa-users"></i>&ensp;Utilisateurs</a></li>
+                <li class="dashbord_i"><a href="parametre"  class="a"><i class="fa-solid fa-gear"></i>&ensp;Paramètre</a></li>
+                <li class="dashbord_i"><a href="/logIn"  class="a"><i class="fa-solid fa-right-from-bracket"></i>&ensp;Se déconnecter</a></li>
             </ul>
         </div>
         <div id="content" class="groupe">

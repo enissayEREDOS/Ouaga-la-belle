@@ -37,4 +37,8 @@ class QuartierController extends Controller
             return redirect('/dashbord/quartiers');
         }
     }
+    function sites($id){
+        $quartier=Quartier::find($id);
+        return view('sitesParCategorie',compact('quartier'));
+    }
 }

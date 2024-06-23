@@ -2,7 +2,7 @@
 @section('content')
     <div id="categorie">
         <h2 class="titrePage">Les quartiers des sites</h2>
-        <div><a href="/dashbord/quartiers/create" class="nouveau"><i class="fa-solid fa-plus"></i>Nouveau site</a></div>
+        <div><a href="/dashbord/quartiers/create" class="nouveau"><i class="fa-solid fa-plus"></i>Nouveau quartier</a></div>
         <table>
             <tr id="enteteTable">
                 <td >Nom du quartier</td>

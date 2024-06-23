@@ -53,8 +53,9 @@ function placeSite() {
     let lng = parseFloat(document.getElementById('lng').value);
     let site = document.getElementById('nom').value;
     var marker = L.marker([lng, lat]).addTo(map);
-    var marker2 = L.marker([lng + 1, lat- 1]).addTo(map); 
     marker.bindPopup("<b>" + site + "</b><br>").openPopup();
     map.setView([lng, lat],12);
 }
+
+
 placeSite();

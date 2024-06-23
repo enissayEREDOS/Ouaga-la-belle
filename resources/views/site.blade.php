@@ -27,13 +27,10 @@
                     <td>{{ $site->date_creation }}</td>
                     <td>{{ $site->categorie->nom_cat }}</td>
                     <td>{{ $site->quartier->quartier }}</td>
-                    <!--<td><img src="{{ asset('storage/' . $site->img) }}" alt="Image principale" class="visuel" style="width: 30px;
-                    height: 30px;
-                    border-radius: 50%;"></td>-->
                     <td><button onclick="afficherPopup({{ $site->id }})" class="btnImg"><i class="fa-regular fa-image"></i></button></td>
                     <td><a href="/dashbord/sites/{{$site->id}}/edit"><i class="fa-regular fa-pen-to-square"></i></a></td>
                     <td><a href="/dashbord/sites/{{$site->id}}/delete"><i class="fa-solid fa-trash"></i></a></td>
-                    <td><a href=""><i class="fa-regular fa-eye"></i></a></td>
+                    <td><a href="/details/{{$site->id}}"><i class="fa-regular fa-eye"></i></a></td>
                 </tr>
             @endforeach
         </table>

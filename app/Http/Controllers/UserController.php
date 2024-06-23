@@ -9,8 +9,8 @@ class UserController extends Controller
 {
     //
     public function index(){
-        $users = User->findAll();
-        return view('user', compact('users')); 
+        $users = User::query()->get();
+        return view('users', compact('users')); 
     }
 
     public function create(){
@@ -38,30 +38,20 @@ class UserController extends Controller
     }
 
     public function edit($id){
-        $etudiant = Etudiant::find($id);
-        return view('etudiantEdit', compact('etudiant'));
+       
     }
 
     public function update(Request $request){
-        $etudiant = Etudiant::findOrFail($request->id);
-        $etudiant->nom = $request->nom;
-        $etudiant->prenoms = $request->prenoms;
-        $etudiant->date_naissance = $request->date_naissance;
-        $etudiant->save();
-        return redirect('/etudiants');
+        
     }
 
     public function delete($id){
-        $etudiant = Etudiant::find($id);
-        if($etudiant){
-            $etudiant->delete();
-        }
-        return redirect('/etudiants');
+       
     }
     public function login(Request $request){
         $existe=User::where('email',"=",$request->email,'and','mot_de_passe','=',sha1($request->mot_de_passe))->exists();
         if($existe){
-            echo('félicitation');
+           return view('dashbord');
             
         }else{
               echo('mail ou mot de passe incorrect  ') ;

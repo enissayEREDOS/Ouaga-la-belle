@@ -9,11 +9,11 @@
     </div>
     <div class="form-group">
         <label for="lat">Latitude</label>
-        <input type="number" class="form-control" id="lat" name="lat" required>
+        <input type="text" class="form-control" id="lat" name="lat" required>
     </div>
     <div class="form-group">
         <label for="lng">Longitude</label>
-        <input type="number" class="form-control" id="lng" name="lng" required>
+        <input type="text" class="form-control" id="lng" name="lng" required>
     </div>
     <div class="form-group">
         <label for="date_creation">Date de création</label>

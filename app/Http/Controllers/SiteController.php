@@ -66,51 +66,15 @@ class SiteController extends Controller
         }
     }
 
-   /* public function search(Request $request)
-    {
-        $query = $request->input('recherche');
 
-        $sites_rech = Site::where('nom', 'LIKE', "%$query%")
-            ->orWhereHas('categorie', function ($q) use ($query) {
-                $q->where('nom_cat', 'LIKE', "%$query%");
-            })
-            ->get();
-
-       // var_dump($sites_rech );
-        $nbrSite=$sites_rech->count();
-        if($nbrSite>1){
-            return view('recherche',compact('sites_rech'));
-        }
-        if($nbrSite==2){
-            $site=$sites_rech->first();
-            return view('detailSite',compact('site'));
-        }
-        if($nbrSite==0){
-            $categories=Categorie::query()->get();
-            return view('index',compact('categories'))->with('Aucune donnée ne correspond à votre recherche');
-        }
-       
-        
-    }*/
-    public function search(Request $request)
-{
-    // Récupérer la requête de recherche
+    public function search(Request $request){
     $query = $request->input('recherche');
-
-    // Effectuer la recherche dans la base de données
     $sites_rech = Site::where('nom', 'LIKE', "%$query%")
         ->orWhereHas('categorie', function ($q) use ($query) {
             $q->where('nom_cat', 'LIKE', "%$query%");
         })
         ->get();
-
-    // Compter le nombre de résultats
     $nbrSite = $sites_rech->count();
-
-    // Débogage
-    //dd($query, $sites_rech, $nbrSite);
-
-    // Vérifier le nombre de résultats et renvoyer les vues appropriées
     if ($nbrSite > 1) {
         return view('recherche', compact('sites_rech'));
     } elseif ($nbrSite == 1) {
@@ -118,7 +82,7 @@ class SiteController extends Controller
         return view('detailSite', compact('site'));
     } else {
         $categories=Categorie::query()->get();
-        return view('index',compact('categories'))->with('message', 'Aucune donnée ne correspond à votre recherche');
+        return view('recherche',compact('sites_rech'))->with('message', 'Aucune donnée ne correspond à votre recherche');
     }
 }
 

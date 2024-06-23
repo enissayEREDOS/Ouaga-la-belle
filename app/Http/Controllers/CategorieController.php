@@ -38,4 +38,8 @@ class CategorieController extends Controller
             return redirect('/dashbord/categories');
         }
     }
+    function sites($id){
+        $categorie=Categorie::find($id);
+        return view('sitesParCategorie',compact('categorie'));
+    }
 }

@@ -37,10 +37,10 @@
                  <div> <a href="" class="smi">Sites</a></div>
                 <div> <a href="" class="smi">OuagaActu</a></div>
            </div>
-            <div href=""  id="barR">
+            <div  id="barR">
                 <form action="/recherche" method="post" id="rechercheForm">
                     @csrf
-                    <a href="#" onclick="event.preventDefault(); document.getElementById('rechercheForm').submit();">
+                    <a href="#" onclick="event.preventDefault(); document.getElementById('rechercheForm').submit();" id="btnRecherche">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
                     <input type="search" name="recherche" id="barRecherche" placeholder="Effectuer une recherche...">
@@ -56,7 +56,7 @@
         <h3 id="desc">La capitale des investitigateur</h3>
     </div>
     <div id="lesSites">
-        <p class="titreType">les images des sites</p>
+        <p class="titreType"></p>
         @foreach ($categories as $categorie )
         <div>
             <h2>{{$categorie->nom_cat}}</h2>
@@ -75,71 +75,7 @@
              </div>
        <div>
         @endforeach
-       <!-- <div>
-            <h2>Type1</h2>
-            <div class="typeSites">
-                <a href="#" onclick="event.preventDefault(); document.getElementById('details-form').submit();"> 
-                    <form action="/details" method="GET" id="details-form">
-                        <input type="hidden" name="id" id="id" value="1">
-                    </form>
-                     <img src="{{asset('image/télécharger.jpg')}}" alt="site1" class="img">
-                     <h2>Titre3</h2>
-                     <h4><em>sous titre3</em></h4>
-                     <h3>Note</h3>
-                </a>
-                <a href="/map" class="site"> 
-                     <img src="{{asset('image/télécharger.jpg')}}" alt="site1" class="img">
-                     <h2>Titre3</h2>
-                     <h4><em>sous titre3</em></h4>
-                     <h3>Note</h3>
-                 </a>
-                <a href="/map" class="site">
-                     <img src="{{asset('image/télécharger.jpg')}}" alt="site1" class="img">
-                     <h2>Titre3</h2>
-                     <p><em>sous titre3</em></p>
-                     <h3>Note</h3>
-                 </a>
-                 <a href="/details" class="site">
-                     <img src="{{asset('image/télécharger.jpg')}}" alt="site1" class="img">
-                     <h2>Titre3</h2>
-                     <h4><em>sous titre3</em></h4>
-                     <h3>Note</h3>
-                 </a>
-                <div id="voirPlus"> <a href="/map" id="surVoirPlus">Voir plus..</a></div>
-             </div>
-        </div>
-       <div>
-        <h2>Type2</h2>
-        <div class="typeSites">
-            <a href="/details" class="site"> 
-                 <img src="{{asset('image/télécharger (1).jpg')}}" alt="site1" class="img">
-                 <h2>Titre3</h2>
-                 <h4><em>sous titre3</em></h4>
-                 <h3>Note</h3>
-             </a>
-            <a href="/details" class="site"> 
-                 <img src="{{asset('image/télécharger (1).jpg')}}" alt="site1" class="img">
-                 <h2>Titre3</h2>
-                 <h4><em>sous titre3</em></h4>
-                 <h3>Note</h3>
-             </a>
-            <a href="/details" class="site">
-                 <img src="{{asset('image/télécharger (1).jpg')}}" alt="site1" class="img">
-                 <h2>Titre3</h2>
-                 <h4><em>sous titre3</em></h4>
-                 <h3>Note</h3>
-             </a>
-             <a href="/details" class="site">
-                 <img src="{{asset('image/télécharger (1).jpg')}}" alt="site1" class="img">
-                 <h2>Titre3</h2>
-                 <h4><em>sous titre3</em></h4>
-                 <h3>Note</h3>
-             </a>
-            <div id="voirPlus"> <a href="" id="surVoirPlus">Voir plus..</a></div>
-         </div>
-       </div>
-    </div>-->
-    
+       
 
     <div id="pied">
         <ul class="elemPied">
@@ -149,10 +85,10 @@
         </ul>
         <ul class="elemPied">
             <p>Liens utils</p>
-            <li><a href="">Présidance du Faso</a></li>
-            <li><a href="">Ministère de la culture des arts et du tourisme</a></li>
-            <li><a href="">Ministère de la transition digitale de poste et la communication éléctroniques</a></li>
-           <li> <a href="">SIAO</a></li>
+            <li><a href="https://www.presidencedufaso.bf/">Présidance du Faso</a></li>
+            <li><a href="https://www.communication.gov.bf/accueil">Ministère de la culture des arts et du tourisme</a></li>
+            <li><a href="https://www.mdenp.gov.bf/accueil">Ministère de la transition digitale de poste et la communication éléctroniques</a></li>
+           <li> <a href="https://siao.bf/">SIAO</a></li>
         </ul>
         <ul class="elemPied">
             <p>A propos</p>
@@ -164,5 +100,6 @@
         </ul>
     </div>
     <div id="copyright"><h3>CopyRight 2024 tout dRoit reservé (c)</h3></div>
+    <script src="{{ asset('js/slide.js') }}"></script>
 </body>
 </html>
