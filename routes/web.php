@@ -33,6 +33,7 @@ Route::post('/dashbord/sites/store',[SiteController::class,'store']);
 Route::get('/dashbord/sites/{id}/edit',[SiteController::class,'edit']);
 Route::post('/dashbord/sites/{id}/edit',[SiteController::class,'update']);
 Route::post('/recherche', [SiteController::class,'search']);
+Route::get('/dashbord/tableau', [SiteController::class,'compter']);
 
 //categories
 Route::get('dashbord/categories',[CategorieController::class,'index']);
@@ -61,3 +62,8 @@ Route::get('dashbord/images/{id}/edit',[ImageController::class,'update']);
 
 //utilisateurs
 Route::get('dashbord/users',[UserController::class,'index']);
+
+//Admin
+Route::get('dasbord/admin',function(){
+    return view('logIn');
+});

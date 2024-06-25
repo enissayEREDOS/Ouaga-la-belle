@@ -17,7 +17,7 @@
                 </div>
             </div>
             <ul>
-                <li class="dashbord_i"><a href="/dashbord" class="a"><i class="fa-solid fa-gauge"></i>&ensp;Tableau de bord</a></li>
+                <li class="dashbord_i"><a href="/dashbord/tableau" class="a"><i class="fa-solid fa-gauge"></i>&ensp;Tableau de bord</a></li>
                 <li class="dashbord_i"><a href="/" class="a"><i class="fa-solid fa-gauge"></i>&ensp;Accueil</a></li>
                 <li class="dashbord_i"><a href="/dashbord/sites"  class="a"><i class="fa-solid fa-sitemap"></i>&ensp;Sites</a></li>
                 <li class="dashbord_i"><a href="/dashbord/categories"  class="a"><i class="fa-solid fa-table-list"></i>&ensp;Catégories</a></li>

@@ -11,13 +11,11 @@
 }
 
 #gMenu{
-    width: 40%;
+    width: 50%;
     display: flex;
     justify-items: center;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 15px ;
-    margin-left: 20px;
 }
 
 #gSmenu{
@@ -54,6 +52,7 @@
     justify-content: flex-start;
 }
 #logo{
+    width: 20%;
     top: 0;
     left: 0;
     position: sticky;

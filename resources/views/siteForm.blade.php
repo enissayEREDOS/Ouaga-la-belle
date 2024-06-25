@@ -41,7 +41,7 @@
     </div>
     <div class="form-group">
         <label for="quartier_id">Image principale</label>
-        <input type="file" name="img" id="img" class="form-control">
+        <input type="file" name="img" id="img" class="form-control" required>
     </div>
     <div> <input type="submit" value="Valider" class="btn" id="valider"> <a href="/dashbord/sites"><input type="button" value="Annuler" class="btn" id="annuler"></a></div>
 </form>

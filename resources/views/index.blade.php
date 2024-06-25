@@ -34,8 +34,8 @@
                 <div> 
                     <a href="" class="smi">Accueil</a>
                 </div>
-                 <div> <a href="" class="smi">Sites</a></div>
-                <div> <a href="" class="smi">OuagaActu</a></div>
+                 <div> <a href="#lesSites" class="smi">Sites</a></div>
+                <div> <a href="#actu" class="smi">OuagaActu</a></div>
            </div>
             <div  id="barR">
                 <form action="/recherche" method="post" id="rechercheForm">
@@ -92,14 +92,15 @@
         </ul>
         <ul class="elemPied">
             <p>A propos</p>
+            <em>Nous sommes des promoteurs agregés des cites sites touristiques</em>
         </ul>
         <ul class="elemPied">
-            <p>Actus</p>
+            <p id="actu">Actus</p>
             <li href=""><a href="">Le Faso.net</a></li>
            <li> <a href="">Evènement</a></li>
         </ul>
     </div>
-    <div id="copyright"><h3>CopyRight 2024 tout dRoit reservé (c)</h3></div>
+    <div id="copyright"><h3>CopyRight 2024 tout drois reservés </h3></div>
     <script src="{{ asset('js/slide.js') }}"></script>
 </body>
 </html>

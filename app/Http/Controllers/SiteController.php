@@ -21,8 +21,9 @@ class SiteController extends Controller
 
     function details(Request $request){
         $id = $request->input('id');
+        $locations=Site::query()->get();
         $site=Site::findOrFail($request->id);
-        return view('/detailSite',compact('site'));
+        return view('/detailSite',compact('site','locations'));
     }
     function store(Request $request){
         $imagePath = $request->file('img')->store('image', 'public');
@@ -86,4 +87,9 @@ class SiteController extends Controller
     }
 }
 
+function compter(){
+    $sites=Site::query();
+    $nb=$sites->count();
+    return view('tableau',compact('nb'));
+}
 }
